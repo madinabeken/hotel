@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QyzPu Hotel - Қонақүйді брондау жүйесі</title>
+  <link rel="stylesheet" href="hotell.css">
+</head>
+<body>
+  <div class="container">
+    <h1>QyzPu Hotel</h1>
+
+    <!-- Тіркелу және кіру формасы -->
+    <div id="authSection">
+      <h2>Тіркелу немесе жүйеге кіру</h2>
+      <form id="authForm">
+        <label for="username">Пайдаланушы аты:</label>
+        <input type="text" id="username" required>
+
+        <label for="password">Құпиясөз:</label>
+        <input type="password" id="password" required>
+
+        <button type="button" onclick="register()">Тіркелу</button>
+        <button type="button" onclick="login()">Кіру</button>
+      </form>
+    </div>
+
+    <!-- Брондау формасы -->
+    <div id="bookingSection" style="display: none;">
+      <h2>Брондау жүйесі</h2>
+      <form id="bookingForm">
+        <label for="checkin">Кіру күні:</label>
+        <input type="date" id="checkin" required>
+
+        <label for="checkout">Шығу күні:</label>
+        <input type="date" id="checkout" required>
+
+        <label for="roomType">Бөлме түрі:</label>
+        <select id="roomType">
+          <option value="all">Барлығы</option>
+          <option value="standard">Стандарт</option>
+          <option value="deluxe">Люкс</option>
+          <option value="suite">Сюит</option>
+        </select>
+        <button type="button" onclick="searchRooms()">Іздеу</button>
+      </form>
+
+      <!-- Бос бөлмелер тізімі -->
+      <div id="roomList" class="room-list"></div>
+
+      <!-- Брондауларды басқару -->
+      <h2>Брондауларды басқару</h2>
+      <div id="bookingList" class="booking-list"></div>
+    </div>
+  </div>
+
+  <script src="hotelll.js"></script>
+</body>
+</html>
+
